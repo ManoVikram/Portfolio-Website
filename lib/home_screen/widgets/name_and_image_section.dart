@@ -13,7 +13,7 @@ class NameAndImageSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height - 80,
+      height: size.height * 0.9,
       padding: const EdgeInsets.all(80.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,6 +24,17 @@ class NameAndImageSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    "Hello👋, I'm",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      color: secondaryTextColor,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.0),
                 Text(
                   "Mano\nVikram",
                   style: TextStyle(
@@ -40,7 +51,7 @@ class NameAndImageSection extends StatelessWidget {
                     fontSize: 36.0,
                     color: secondaryTextColor,
                   ),
-                )
+                ),
               ],
             ),
           ),

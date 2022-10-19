@@ -12,9 +12,8 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: size.height - 80.0,
-      padding: const EdgeInsets.all(80.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 80.0, vertical: 40.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,12 +27,12 @@ class AboutSection extends StatelessWidget {
           ),
           const SizedBox(height: 40.0),
           Padding(
-            padding: EdgeInsets.only(left: size.width * 0.1),
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
             child: const Text(
               "I’m a developer who loves writing software and tinkering around with  technology. Curiosity drives me into the rabit hole to learn and try out new stuff. Experimenting with what you have learnt is more fun and powerful than just learning. I find it fun to try out new technologies and get a taste of it. I primarily work with Flutter to build awesome UI, PostgreSQL for backend database and GoLang for building RESTful APIs. Creating content on YouTube is something I do as a hobby.",
               style: TextStyle(
                 color: secondaryTextColor,
-                fontSize: 36.0,
+                fontSize: 30.0,
                 height: 1.8,
               ),
             ),
