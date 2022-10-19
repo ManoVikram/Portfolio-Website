@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 
 import './project_card.dart';
+import '../models/project.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({
@@ -35,10 +36,13 @@ class ProjectsSection extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: 7,
+            itemCount: projects.length,
             itemBuilder: (context, index) => ProjectCard(
               size: size,
               index: index,
+              title: projects[index].title,
+              image: projects[index].image,
+              url: projects[index].url,
             ),
           ),
         ),
