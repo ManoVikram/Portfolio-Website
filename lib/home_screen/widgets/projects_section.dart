@@ -41,6 +41,7 @@ class ProjectsSection extends StatelessWidget {
               size: size,
               index: index,
               title: projects[index].title,
+              description: projects[index].description,
               image: projects[index].image,
               url: projects[index].url,
             ),

@@ -23,19 +23,39 @@ class NameAndImageSection extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 8.0),
-                  child: Text(
-                    "Hello👋, I'm",
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      color: secondaryTextColor,
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Hello",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            color: secondaryTextColor,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "👋",
+                          style: TextStyle(
+                            fontFamily: "NotoColorEmoji",
+                            fontSize: 30.0,
+                          ),
+                        ),
+                        TextSpan(
+                          text: ", I'm",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            color: secondaryTextColor,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
-                Text(
+                const SizedBox(height: 20.0),
+                const Text(
                   "Mano\nVikram",
                   style: TextStyle(
                     height: 1.2,
@@ -44,8 +64,8 @@ class NameAndImageSection extends StatelessWidget {
                     color: primaryTextColor,
                   ),
                 ),
-                SizedBox(height: 20.0),
-                Text(
+                const SizedBox(height: 20.0),
+                const Text(
                   "Developer | Tinkerer | Hobbyist",
                   style: TextStyle(
                     fontSize: 36.0,
