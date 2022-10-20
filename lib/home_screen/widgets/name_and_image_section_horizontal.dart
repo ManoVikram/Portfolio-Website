@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import '../../responsive.dart';
 
-class NameAndImageSection extends StatelessWidget {
-  const NameAndImageSection({
+class NameAndImageSectionHorizontal extends StatelessWidget {
+  const NameAndImageSectionHorizontal({
     Key? key,
     required this.size,
   }) : super(key: key);
@@ -14,7 +15,9 @@ class NameAndImageSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: size.height * 0.9,
-      padding: const EdgeInsets.all(80.0),
+      padding: EdgeInsets.all(Responsive.isDesktop(context)
+          ? 80.0
+          : (Responsive.isMiniDesktop(context) ? 50.0 : 40.0)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,12 +30,17 @@ class NameAndImageSection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: RichText(
-                    text: const TextSpan(
+                    text: TextSpan(
                       children: [
                         TextSpan(
                           text: "Hello",
                           style: TextStyle(
-                            fontSize: 30.0,
+                            fontSize: Responsive.isDesktop(context)
+                                ? 30.0
+                                : ((Responsive.isMiniDesktop(context) ||
+                                        Responsive.isUltraTablet(context))
+                                    ? 24.0
+                                    : 20.0),
                             color: secondaryTextColor,
                           ),
                         ),
@@ -40,13 +48,23 @@ class NameAndImageSection extends StatelessWidget {
                           text: "👋",
                           style: TextStyle(
                             fontFamily: "NotoColorEmoji",
-                            fontSize: 30.0,
+                            fontSize: Responsive.isDesktop(context)
+                                ? 30.0
+                                : ((Responsive.isMiniDesktop(context) ||
+                                        Responsive.isUltraTablet(context))
+                                    ? 24.0
+                                    : 20.0),
                           ),
                         ),
                         TextSpan(
                           text: ", I'm",
                           style: TextStyle(
-                            fontSize: 30.0,
+                            fontSize: Responsive.isDesktop(context)
+                                ? 30.0
+                                : ((Responsive.isMiniDesktop(context) ||
+                                        Responsive.isUltraTablet(context))
+                                    ? 24.0
+                                    : 20.0),
                             color: secondaryTextColor,
                           ),
                         ),
@@ -55,20 +73,24 @@ class NameAndImageSection extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const Text(
+                Text(
                   "Mano\nVikram",
                   style: TextStyle(
                     height: 1.2,
-                    fontSize: 108.0,
+                    fontSize: Responsive.isDesktop(context)
+                        ? 108.0
+                        : (Responsive.isMiniDesktop(context) ? 96.0 : 84.0),
                     fontWeight: FontWeight.w600,
                     color: primaryTextColor,
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const Text(
+                Text(
                   "Developer | Tinkerer | Hobbyist",
                   style: TextStyle(
-                    fontSize: 36.0,
+                    fontSize: Responsive.isDesktop(context)
+                        ? 36.0
+                        : (Responsive.isMiniDesktop(context) ? 30.0 : 24.0),
                     color: secondaryTextColor,
                   ),
                 ),
