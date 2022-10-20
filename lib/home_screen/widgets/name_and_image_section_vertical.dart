@@ -14,7 +14,7 @@ class NameAndImageSectionVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height * 0.9,
+      height: Responsive.isMobile(context) ? size.height : size.height * 0.9,
       alignment: Alignment.topCenter,
       padding: EdgeInsets.all(Responsive.isMobile(context) ? 20.0 : 40.0),
       child: Column(
