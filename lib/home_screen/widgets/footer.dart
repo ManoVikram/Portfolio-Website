@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../constants.dart';
+import '../../responsive.dart';
 
 class Footer extends StatelessWidget {
   const Footer({
@@ -23,16 +24,24 @@ class Footer extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Column(
         children: [
-          const Text(
+          Text(
             "Let's connect",
             style: TextStyle(
               color: secondaryTextColor,
-              fontSize: 20.0,
+              fontSize: (Responsive.isDesktop(context) ||
+                      Responsive.isMiniDesktop(context) ||
+                      Responsive.isUltraTablet(context))
+                  ? 20.0
+                  : (Responsive.isTablet(context) ||
+                          Responsive.isMiniTablet(context))
+                      ? 18.0
+                      : 16.0,
             ),
           ),
           const SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            alignment: WrapAlignment.center,
+            direction: Axis.horizontal,
             children: [
               IconButton(
                 onPressed: () => _launchUrl("mailto:manovik18@gmail.com"),
@@ -43,7 +52,8 @@ class Footer extends StatelessWidget {
                 icon: const Icon(FontAwesomeIcons.github),
               ),
               IconButton(
-                onPressed: () => _launchUrl("https://in.linkedin.com/in/manovik18"),
+                onPressed: () =>
+                    _launchUrl("https://in.linkedin.com/in/manovik18"),
                 icon: const Icon(FontAwesomeIcons.linkedin),
                 color: Colors.indigo,
               ),
@@ -53,23 +63,66 @@ class Footer extends StatelessWidget {
                 color: Colors.blue,
               ),
               IconButton(
-                onPressed: () => _launchUrl("https://www.youtube.com/ManoVikram"),
+                onPressed: () =>
+                    _launchUrl("https://www.youtube.com/ManoVikram"),
                 icon: const Icon(FontAwesomeIcons.youtube),
                 color: Colors.red,
               ),
               IconButton(
-                onPressed: () => _launchUrl("https://www.instagram.com/themanovik18/"),
+                onPressed: () =>
+                    _launchUrl("https://www.instagram.com/themanovik18/"),
                 icon: const Icon(FontAwesomeIcons.instagram),
                 color: Colors.pink,
               ),
             ],
           ),
           const SizedBox(height: 20.0),
-          const Text(
-            "Made with ❤️ by Mano",
-            style: TextStyle(
-              color: secondaryTextColor,
-              fontSize: 16.0,
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: "Made with ",
+                  style: TextStyle(
+                    color: secondaryTextColor,
+                    fontSize: (Responsive.isDesktop(context) ||
+                            Responsive.isMiniDesktop(context) ||
+                            Responsive.isUltraTablet(context))
+                        ? 16.0
+                        : (Responsive.isTablet(context) ||
+                                Responsive.isMiniTablet(context))
+                            ? 14.0
+                            : 12.0,
+                  ),
+                ),
+                TextSpan(
+                  text: "❤️",
+                  style: TextStyle(
+                    fontFamily: "NotoColorEmoji",
+                    fontSize: (Responsive.isDesktop(context) ||
+                            Responsive.isMiniDesktop(context) ||
+                            Responsive.isUltraTablet(context))
+                        ? 16.0
+                        : (Responsive.isTablet(context) ||
+                                Responsive.isMiniTablet(context))
+                            ? 14.0
+                            : 12.0,
+                  ),
+                ),
+                TextSpan(
+                  text: " by Mano",
+                  style: TextStyle(
+                    color: secondaryTextColor,
+                    fontSize: (Responsive.isDesktop(context) ||
+                            Responsive.isMiniDesktop(context) ||
+                            Responsive.isUltraTablet(context))
+                        ? 16.0
+                        : (Responsive.isTablet(context) ||
+                                Responsive.isMiniTablet(context))
+                            ? 14.0
+                            : 12.0,
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 20.0),
