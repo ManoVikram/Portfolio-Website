@@ -16,8 +16,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    print(size.width);
-
     late double whiteCanvasOuterPadding;
 
     if (Responsive.isDesktop(context) || Responsive.isMiniDesktop(context)) {
@@ -61,18 +59,26 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Responsive(
-                  //   padding: whiteCanvasOuterPadding,
-                  //   mobile: NameAndImageSectionVertical(size: size),
-                  //   miniTablet: NameAndImageSectionVertical(size: size),
-                  //   tablet: NameAndImageSectionVertical(size: size),
-                  //   ultraTablet: NameAndImageSectionHorizontal(size: size),
-                  //   miniDesktop: NameAndImageSectionHorizontal(size: size),
-                  //   desktop: NameAndImageSectionHorizontal(size: size),
-                  // ),
-                  // AboutSection(size: size),
-                  // ProjectsSection(size: size),
-                  // const SizedBox(height: 160.0),
+                  Responsive(
+                    padding: whiteCanvasOuterPadding,
+                    mobile: NameAndImageSectionVertical(size: size),
+                    miniTablet: NameAndImageSectionVertical(size: size),
+                    tablet: NameAndImageSectionVertical(size: size),
+                    ultraTablet: NameAndImageSectionHorizontal(size: size),
+                    miniDesktop: NameAndImageSectionHorizontal(size: size),
+                    desktop: NameAndImageSectionHorizontal(size: size),
+                  ),
+                  AboutSection(size: size),
+                  ProjectsSection(size: size),
+                  const Responsive(
+                    padding: 0.0,
+                    mobile: SizedBox(height: 40.0),
+                    miniTablet: SizedBox(height: 80.0),
+                    tablet: SizedBox(height: 120.0),
+                    ultraTablet: SizedBox(height: 120.0),
+                    miniDesktop: SizedBox(height: 160.0),
+                    desktop: SizedBox(height: 160.0),
+                  ),
                   const Footer(),
                 ],
               ),
