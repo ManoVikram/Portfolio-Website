@@ -1,11 +1,11 @@
 {
-    "name": "mano_vikram_portfolio",
-    "short_name": "mano_vikram_portfolio",
+    "name": "Mano Vikram",
+    "short_name": "Mano Vikram",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Hey, I'm Mano - a developer who loves writing software and tinkering around with technology!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
