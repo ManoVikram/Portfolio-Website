@@ -13,6 +13,7 @@ class App extends StatelessWidget {
       title: "Mano Vikram",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Colors.transparent,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       scrollBehavior: CustomScrollBehaviour(),
