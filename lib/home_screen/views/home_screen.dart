@@ -61,16 +61,16 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Responsive(
-                    padding: whiteCanvasOuterPadding,
-                    mobile: NameAndImageSectionVertical(size: size),
-                    miniTablet: NameAndImageSectionVertical(size: size),
-                    tablet: NameAndImageSectionVertical(size: size),
-                    ultraTablet: NameAndImageSectionHorizontal(size: size),
-                    miniDesktop: NameAndImageSectionHorizontal(size: size),
-                    desktop: NameAndImageSectionHorizontal(size: size),
-                  ),
-                  AboutSection(size: size),
+                  // Responsive(
+                  //   padding: whiteCanvasOuterPadding,
+                  //   mobile: NameAndImageSectionVertical(size: size),
+                  //   miniTablet: NameAndImageSectionVertical(size: size),
+                  //   tablet: NameAndImageSectionVertical(size: size),
+                  //   ultraTablet: NameAndImageSectionHorizontal(size: size),
+                  //   miniDesktop: NameAndImageSectionHorizontal(size: size),
+                  //   desktop: NameAndImageSectionHorizontal(size: size),
+                  // ),
+                  // AboutSection(size: size),
                   ProjectsSection(size: size),
                   const SizedBox(height: 160.0),
                   const Footer(),
