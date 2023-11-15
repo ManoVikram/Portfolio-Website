@@ -14,6 +14,12 @@ class Project {
 
 List<Project> projects = const [
   Project(
+    title: "Navkar Matrimony",
+    description: "Navkar Matrimony is a marriage app exclusively for Jains.",
+    image: "assets/images/projects/NavkarLogo.png",
+    url: "https://play.google.com/store/apps/details?id=com.navkarmatrimony.app",
+  ),
+  Project(
     title: "HarrySay",
     description: "A CLI Tool inspired by CowSay",
     image: "assets/images/projects/HarrySay.png",

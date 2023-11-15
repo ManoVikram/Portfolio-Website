@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../responsive.dart';
 
-import './base_projec_card.dart';
+import 'base_project_card.dart';
 import './hover_project_card.dart';
 import '../models/project.dart';
 
