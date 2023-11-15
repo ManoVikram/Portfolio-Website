@@ -30,7 +30,7 @@ class HoverProjectCard extends StatelessWidget {
         color: isHover ? Colors.black.withOpacity(0.8) : Colors.transparent,
         border: Border.all(
           color: primaryTextColor,
-          strokeAlign: StrokeAlign.inside,
+          strokeAlign: BorderSide.strokeAlignInside,
           width: (Responsive.isDesktop(context) ||
                   Responsive.isMiniDesktop(context))
               ? 10.0
